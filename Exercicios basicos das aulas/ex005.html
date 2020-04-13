@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo</title>
+    <style>
+        body{
+            background: rgb(96, 96, 255);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Primeiros Passos com DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div class = "msg">click em mim</div>
+    <script>
+        //brincando com DOM
+       //usar o var aqui é perigoso...
+       var p1 = window.document.getElementsByTagName('p')[0]
+        p1.style.color = 'yellow'
+
+        window.document.write(p1.innerText)
+        //window.alert(p1.innerHTML)
+
+        //var d = window.document.getElementById('msg')
+        //d.style.background = 'green'
+        var d = window.document.querySelector('div.msg')
+        d.style.background = 'blue'
+        //d.innerText = 'Estou aguardando'
+        //window.document.getElementById('msg').innerText = 'Ola!'
+    </script>
+</body>
+</html>
